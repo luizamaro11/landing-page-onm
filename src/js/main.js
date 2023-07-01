@@ -1,7 +1,9 @@
-// import './css/style.css'
+// FAQs
 
-// document.querySelector('#app').innerHTML = `
-//   <div>
-//     <h1>Hello Vite!</h1>
-//   </div>
-// `
+const faqs = document.querySelectorAll(".faq article")
+
+faqs.forEach((faq) => {
+    faq.addEventListener("click", () => {
+        faq.classList.toggle("active")
+    })
+})

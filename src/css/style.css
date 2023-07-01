@@ -6,9 +6,9 @@
 }
 
 body {
-  width: 1920px; /* deixar depois responsivo o site para esse tamanho de tela */ 
+  max-width: 1920px; /* deixar depois responsivo o site para esse tamanho de tela */ 
   background-color: #F0F0F0;
-  background: url("../images/Noise_1.png"), lightgray 50% / cover no-repeat;
+  /* background: url("../images/Noise_1.png"), lightgray 50% / cover no-repeat; */
   margin: 0;
   padding: 0;
   border: 0;
@@ -16,13 +16,16 @@ body {
 }
 
 .bussola {
-  background: url("../images/fgmd_bussola.png"), cover no-repeat;
   position: absolute;
-  right: -55px;
+  right: -54px;
   top: 20px;
   width: 1031px;
   height: 1031px;
   z-index: -1;
+}
+
+span.bold {
+  font-weight: 700;
 }
 
 header.logos {
@@ -62,12 +65,12 @@ header .logo_onm {
   line-height: 133.4%;
 }
 
-.header_page h1 span {
+/* .header_page h1 span {
   font-weight: 700;
-}
+} */
 
 .video {
-  margin: 0 418px 0 410px;
+  margin: 0 319px 0 319px;
 }
 
 .call_to_action {
@@ -127,9 +130,20 @@ header .logo_onm {
   border-radius: 10px;
   width: 692px;
   margin: 0 auto;
+  cursor: pointer;
 }
 
-.faq article h3 {
+.faq article .question {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #0070DF;
+  width: 100%;
+  padding-bottom: 16px;
+}
+
+.faq article .question h3 {
   color: #0070DF;
   font-size: 18px;
   /* font-family: Paralucent; */
@@ -137,9 +151,6 @@ header .logo_onm {
   font-weight: 500;
   line-height: 133.4%;
   margin: 0;
-  width: 100%;
-  border-bottom: 2px solid #0070DF;
-  padding-bottom: 16px;
 }
 
 .faq article p {
@@ -150,6 +161,41 @@ header .logo_onm {
   font-weight: 500;
   line-height: 130%;
   letter-spacing: 0.32px;
+  opacity: 0.699999988079071;
+  display: none;
+  transition: display 1.4s ease;
+}
+
+.faq article.active > p {
+  display: block;
+  animation: fade 1s ease-in-out;
+}
+
+.faq article .question img {
+  transition: transform 0.5s ease-in;
+}
+
+.faq article.active .question img {
+  transform: rotate(180deg);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  do {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.informations {
+  margin-bottom: 40px;
+}
+
+.informations > header {
+  margin: 90px auto 60px auto;
 }
 
 .informations > header h2 {
@@ -161,7 +207,7 @@ header .logo_onm {
   font-style: normal;
   line-height: 130%;
   width: 600px;
-  margin: 90px auto 0 auto;
+  margin: 0 auto;
 }
 
 .informations > header p {
@@ -171,6 +217,202 @@ header .logo_onm {
   /* font-family: Paralucent; */
   font-style: normal;
   line-height: 130%;
-  width: 600px;
+  width: 549px;
   margin: 0 auto;
+  opacity: 0.699999988079071;
+}
+
+.informations .box_information {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: #FFF;
+  width: 1012px;
+  margin: 0 auto;
+  border-radius: 11.916px;
+  border: 16px solid rgba(254, 254, 254, 0.26);
+}
+
+.informations .box_information {
+  padding-left: 62.49px;
+  padding-top: 56.36px;
+}
+
+.informations .box_information h3 {
+  color: #EE1B5A;
+  font-size: 24px;
+  /* font-family: Paralucent; */
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  padding-bottom: 16px;
+}
+
+.informations .box_information article {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  padding-bottom: 16px;
+}
+
+.informations .box_information article h4 {
+  padding-left: 16px;
+  color: #212121;
+  font-size: 20px;
+  /* font-family: Paralucent; */
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  margin: 0;
+  width: 300px;
+}
+
+.informations .box_information article .support {
+  line-height: 120%;
+}
+
+.informations .box_information article .support span {
+  color: hsla(0, 0%, 46%, 1);
+  font-size: 16px;
+}
+
+/* .informations .box_information .price .mockup {
+  width: 497.905px;
+  height: 280.071px;
+} */
+
+.informations .box_information .price {
+  padding-right: 58.13px;
+}
+
+.informations .box_information .price > article {
+  width: 438px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 27.16px;
+}
+
+.informations .box_information .price > article h4:first-child {
+  color: #FF2828;
+  text-align: center;
+  font-size: 36.617px;
+  /* font-family: Paralucent; */
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  width: 210.737px;
+  padding: 0;
+}
+
+.informations .box_information .price > article .line {
+  width: 205.158px;
+  transform: rotate(5deg);
+  border: 3.5px solid #FF2828;
+  margin-top: -55px;
+}
+
+.informations .box_information .price > article h4:nth-child(3) {
+  color: #000;
+  text-align: center;
+  font-size: 28.677px;
+  /* font-family: Paralucent; */
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  padding-left: 0;
+}
+
+.informations .box_information .price > article h4:nth-child(3) span {
+  color: hsla(210, 100%, 44%, 1);
+  font-size: 80.617px;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.informations .box_information .price > article button {
+  width: 100%;
+  padding: 26.01px 34.681px;
+  border-radius: 10.838px;
+  font-size: 17.508px;
+  margin: 0;
+  background-color: #0070DF;
+  color: #FFF;
+  border: 0;
+}
+
+footer {
+  width: 100%;
+  border-top: 17px solid #64CFF6;
+  padding-top: 40px;
+  margin-bottom: 95.76px;
+}
+
+footer > article.guarantee {
+  display: flex;
+  width: 758.105px;
+  align-items: flex-start;
+  gap: 23px;
+  margin: 0 auto;
+}
+
+footer > article div {
+  display: flex;
+  flex-direction: column;
+}
+
+footer > article.guarantee h3 {
+  color: #EE1B5A;
+  font-size: 28px;
+  /* font-family: Paralucent; */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+footer > article.guarantee p {
+  color: #212121;
+  font-size: 20px;
+  /* font-family: Paralucent; */
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: 0.4px;
+  opacity: 0.699999988079071;
+  margin: 0;
+}
+
+footer article.doubt {
+  width: 418.105px;
+  display: flex;
+  align-items: flex-start;
+  gap: 23px;
+  margin: 0 auto;
+}
+
+footer article.doubt h3 {
+  color: #0D0D0D;
+  text-align: center;
+  font-size: 23.107px;
+  /* font-family: Paralucent; */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+footer article.doubt p {
+  color: #212121;
+  text-align: center;
+  font-size: 16.175px;
+  /* font-family: Paralucent; */
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: 0.324px;
+  opacity: 0.699999988079071;
+  margin: 0;
 }
