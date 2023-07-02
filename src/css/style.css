@@ -1,14 +1,13 @@
 :root {
-  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: "Paralucent";
   line-height: 1.5;
   font-weight: 400;
   /* border-color: none; */
 }
 
 body {
-  max-width: 1920px; /* deixar depois responsivo o site para esse tamanho de tela */ 
+  /* max-width: 1920px; deixar depois responsivo o site para esse tamanho de tela  */
   background-color: #F0F0F0;
-  /* background: url("../images/Noise_1.png"), lightgray 50% / cover no-repeat; */
   margin: 0;
   padding: 0;
   border: 0;
@@ -70,7 +69,8 @@ header .logo_onm {
 } */
 
 .video {
-  margin: 0 319px 0 319px;
+  /* margin: 0 20% 0 20%; */
+  width: 56.875%;
 }
 
 .call_to_action {
@@ -339,6 +339,7 @@ header .logo_onm {
   background-color: #0070DF;
   color: #FFF;
   border: 0;
+  font-weight: 700;
 }
 
 footer {
