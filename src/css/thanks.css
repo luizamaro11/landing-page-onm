@@ -214,7 +214,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 17px;
-  margin-bottom: 36%;
+  margin-bottom: 90px;
 }
 
 footer article {
@@ -271,6 +271,32 @@ footer .service_email div button {
   border: 1px solid rgba(197, 34, 31, 0.40);
   background: #FFF;
   color: #C5221F;
+}
+
+@media (max-width: 85.375em) {
+
+  .bussola_2 {
+    width: 44%;
+    top: 15%;
+  }
+
+  .video {
+    width: 50%;
+  }
+}
+
+@media (max-width: 60em) {
+  .bussola_1 {
+    width: 32%;
+  }
+
+  .bussola_2 {
+    display: none;
+  }
+
+  .video {
+    width: 72%;
+  }
 }
 
 @media (max-width: 25.875em) {

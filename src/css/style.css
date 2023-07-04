@@ -22,7 +22,7 @@ body {
   right: 0%;
   top: 20px;
   width: 45%;
-  /* height: 1031px; */
+  height: 1031px;
   z-index: -1;
 }
 
@@ -512,12 +512,14 @@ dialog input[type=button] {
   cursor: pointer;
 }
 
-@media (max-width: 85.375em) {
-
-}
-
 @media (max-width: 60em) {
-  
+  .informations .box_information {
+    margin: 0 20px;
+  }
+
+  footer > article.guarantee {
+    width: 80%;
+  }
 }
 
 @media (max-width: 25.875em) {
@@ -527,10 +529,10 @@ dialog input[type=button] {
   }
 
   .bussola {
-    width: 569px;
-    height: 569px;
-    left: 129px;
-    top: -284px;
+    width: 440px;
+    height: 440px;
+    left: 156px;
+    top: -220px;
   }
 
   header.logos {
