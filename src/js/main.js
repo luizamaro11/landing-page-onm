@@ -1,12 +1,19 @@
 // FAQs
 
-const faqs = document.querySelectorAll(".faq article")
+const faqs = document.querySelectorAll(".faq .wrapper")
+const contentDiv = document.querySelectorAll(".faq .wrapper .content")
 
-faqs.forEach((faq) => {
-    faq.addEventListener("click", () => {
-        faq.classList.toggle("active")
+for (let i = 0; i < faqs.length; i++) {
+    faqs[i].addEventListener("click", () => {
+        faqs[i].classList.toggle("active")
+
+        for (let j = 0; j < contentDiv.length; j++) {
+            if (i !== j) {
+                faqs[j].classList.remove("active")
+            }
+        }
     })
-})
+}
 
 // Ação do CTA
 const ctas = document.querySelectorAll(".cta")

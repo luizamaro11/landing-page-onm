@@ -157,7 +157,7 @@ header .logo_onm {
   margin: 0;
 }
 
-.faq article p {
+.faq article .content p {
   color: #212121;
   font-size: 16px;
   font-style: normal;
@@ -169,7 +169,7 @@ header .logo_onm {
   transition: display 1.4s ease;
 }
 
-.faq article.active > p {
+.faq article.active .content p {
   display: block;
   animation: fade 1s ease-in-out;
 }
@@ -510,6 +510,10 @@ dialog input[type=button] {
   line-height: 110%;
   letter-spacing: 0.4px;
   cursor: pointer;
+}
+
+@media (max-width: 85.375em) {
+
 }
 
 @media (max-width: 60em) {
