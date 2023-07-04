@@ -438,6 +438,12 @@ dialog .close svg {
   cursor: pointer;
 }
 
+dialog .message {
+  padding: 10px 15px;
+  border: 1px solid #856404;
+  display: none;
+}
+
 dialog p {
   color: #8E8E8E;
   text-align: center;

@@ -18,7 +18,6 @@ ctas.forEach((cta) => {
     cta.addEventListener("click", () => {
         modal.showModal()
 
-        console.log(body)
         body.style.filter = "blur(10px)"
     })
 })
@@ -26,7 +25,6 @@ ctas.forEach((cta) => {
 btnClose.addEventListener("click", () => {
     modal.close()
 
-    console.log(body)
     body.style.filter = "none"
 })
 
@@ -44,3 +42,20 @@ const phoneMask = (value) => {
     value = value.replace(/(\d)(\d{4})$/,"$1-$2")
     return value
 }
+
+// redirect página de obrigado
+const btnContinuar = document.querySelector("dialog > a")
+
+btnContinuar.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    let name = document.getElementsByName("name")[0];
+
+    if (name.value !== '') {
+        location.href = "./thanks.html?name=" + name.value
+    } else {
+        let divMessage = document.querySelector("dialog .message")
+        divMessage.style.display = "block"
+    }
+
+})

@@ -16,6 +16,7 @@ body, html {
   top: 0;
   right: -2px;
   position: absolute;
+  width: 40%;
 }
 
 .bussola_2 {
@@ -150,7 +151,7 @@ header .logo_onm {
   font-weight: 500;
   line-height: 130%;
   letter-spacing: 0.4px;
-  max-width: 73%;
+  width: 73%;
 }
 
 .welcome .student_manual .btn_download_manual {
@@ -175,5 +176,193 @@ header .logo_onm {
 .welcome .student_manual .macbook {
   position: absolute;
   right: 22%;
-  bottom: 18.5%;
+  top: 106%;
+}
+
+.welcome .doubt {
+  max-width: 756px;
+  padding: 16px 32px;
+  border-radius: 10px;
+  background: #FFF;
+  margin-top: 85px;
+  margin-bottom: 40px;
+}
+
+.welcome .doubt h2 {
+  color: #0070DF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  text-align: left;
+}
+
+.welcome .doubt p {
+  color: #212121;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: 0.32px;
+  opacity: 0.699999988079071;
+  text-align: left;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 36%;
+}
+
+footer article {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 358px;
+}
+
+footer article div {
+  display: flex;
+  flex-direction: column;
+}
+
+footer article div h2 {
+  margin: 0;
+  color: #0D0D0D;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+footer article div p {
+  color: #212121;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: 0.28px;
+  opacity: 0.699999988079071;
+  padding-right: 100px;
+}
+
+footer article div button {
+  border-radius: 2px;
+  padding: 8px 20px;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0.28px;
+  max-width: 216px;
+}
+
+footer .service_whatsapp div button {
+  background: #11A61F;
+  color: #FFF;
+  border: 0;
+}
+
+footer .service_email div button {
+  border: 1px solid rgba(197, 34, 31, 0.40);
+  background: #FFF;
+  color: #C5221F;
+}
+
+@media (max-width: 25.875em) {
+  .bussola_1 {
+    width: 66%;
+  }
+
+  .bussola_2 {
+    display: none;
+  }
+
+  header.logos {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: 28px;
+  }
+
+  header .logo_gestor_mkt {
+    width: 215px;
+  }
+
+  header .logo_onm {
+    width: 164.045px;
+    height: 30.532px;
+    margin-left: 0;
+  }
+
+  .welcome .student_manual .macbook {
+    position: absolute;
+    top: 206%;
+    right: 12%;
+    width: 316.02px;
+    height: 208.285px;
+  }
+
+  .welcome article h1 {
+    font-size: 28px;
+    margin-top: 35px;
+  }
+
+  .welcome article:nth-child(1) p {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .video {
+    width: 380px;
+    height: 213.75px;
+  }
+
+  .welcome article:nth-child(2) p {
+    margin: 0 26px;
+  }
+
+  .welcome .student_manual {
+    padding-top: 90px;
+    margin: 40% 10px 0 10px;
+    padding: 90px 10px 10px 10px;
+  }
+
+  .welcome .student_manual h2 {
+    font-size: 24px;
+    margin: 0 auto;
+  }
+
+  .welcome .student_manual p {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .welcome .student_manual .btn_download_manual {
+    font-size: 20px;
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 20px;
+  }
+
+  .welcome .doubt {
+    margin: 30px 10px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  footer article div h2 {
+    font-size: 22px;
+  }
+
+  footer article div p {
+    font-size: 15px;
+  }
 }
